@@ -1,0 +1,77 @@
+{  
+    "referenceGuide" : "Cite all the reference sources in the required format. Proper citations will help you avoid unnecessary trouble but does not make it acceptable to copy code.  Read the course and university policy statements in this regard. Read the JSON grammar from the Internet if needed.",
+    "myAndrewId":"Team4",    
+    "websites":[  
+        {  
+            "title":"Google Cloud Platform",
+            "url":"https://cloud.google.com/vision/docs/reference/libraries",
+            "code":"import io
+                    import os
+
+                    client = vision.ImageAnnotatorClient()
+                    image = types.Image(content=content）
+                    response = client.label_detection(image=image)
+                    labels = response.label_annotations
+
+                    print('Labels:')
+                    for label in labels:
+                       print(label.description)",
+              "description":"Google Cloud Vision API" 
+        }
+        {
+              "title":"AWS"
+              "url":"http://docs.aws.amazon.com/rekognition/latest/dg/tutorial-moderate-images.html"
+              "code":"  DetectModerationLabelsResult result = rekognitionClient.detectModerationLabels(request);
+             List<ModerationLabel> labels = result.getModerationLabels();
+             System.out.println("Detected labels for " + image);"
+              "description":"AWS Rekognition API"
+        }
+	{
+	title: "CodePen.io"
+	url: "https://codepen.io/"
+	code: <div class="wrapper">
+		<div class="container">
+			<h1>Welcome to UPMC Health Calculator</h1>
+			<form class="form">
+				<input class="tb5" type="text" id="url_id"
+					placeholder=" Enter Bucket name"> <input type="button"
+					id="submit" value="Send"
+					onClick="javascript:
+   					 window.open('http://128.237.216.91:7000/trigger?bucketName='
+   					 + document.getElementById('url_id').value);" />
+				</form>
+				<form action="loading.html">
+				<input type="submit" id="submit" value="Calculate">
+				</form>
+				</div>
+	}
+	{  
+            "title":"Google Cloud Platform",
+            "url":"https://cloud.google.com/vision/docs/reference/libraries",
+            "code":"import io
+                    import os
+
+                    client = vision.ImageAnnotatorClient()
+                    image = types.Image(content=content）
+                    response = client.label_detection(image=image)
+                    labels = response.label_annotations
+
+                    print('Labels:')
+                    for label in labels:
+                       print(label.description)",
+              "description":"Google Cloud Vision API" 
+        }
+	   {
+              "title": "boto3 s3 client"
+              "url": "http://boto3.readthedocs.io/en/latest/reference/services/s3.html"
+              "code":" import boto3
+			client = boto3.client('s3')
+			response = client.copy_object(Bucket, CopySource, Key)"
+        }
+	{
+              "title": "boto3 s3 bucket"
+              "url": "http://boto3.readthedocs.io/en/latest/reference/services/s3.html"
+              "code":" import boto3
+			s3 = boto3.resource('s3')
+			bucket = s3.Bucket('name')"
+        }

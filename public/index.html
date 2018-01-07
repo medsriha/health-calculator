@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+    <script src="https://codepen.io/anon/pen/aWapBE.js"></script>
+</head>
+<body>
+    <div style="width: 400px; height: 400px; margin: auto;">
+        <canvas id="myChart" width="400" height="400"></canvas>
+        <div id="score" style="width: 400px; font-size: 30px; margin:auto;">
+    </div>
+    <script>
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+
+                var myData = [12, 19, 3, 5, 2, 3, 1, 20];
+                var chart = new Chart(document.getElementById("myChart"),{
+                "type":"doughnut",
+                "data":{
+                    "labels":Object.keys(JSON.parse(xmlHttp.responseText)),
+                    "datasets":[{
+                        "label":"My First Dataset",
+                        "data": Object.values(JSON.parse(xmlHttp.responseText)),
+                          "backgroundColor": palette('tol', myData.length).map(function(hex) {
+                            return '#' + hex;
+                          })
+                        // "backgroundColor":["#2E1F27","#854D27","#FCF0D4","#6C6B50","#E69868","#45062E","#7F055F","#E5A4CB"]
+                    }]
+                }, 
+                "options": {"cutoutPercentage": 0}});
+            }
+        }
+        xmlHttp.open("GET", "http://ec2-52-207-251-163.compute-1.amazonaws.com:3000/data", true); // true for asynchronous 
+        xmlHttp.send(null);
+
+                var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() { 
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                document.getElementById("score").innerText = xmlHttp.responseText;
+            }
+        }
+        xmlHttp.open("GET", "http://ec2-52-207-251-163.compute-1.amazonaws.com:3000/score", true); // true for asynchronous 
+        xmlHttp.send(null);
+
+    </script>
+</body>
+</html>
