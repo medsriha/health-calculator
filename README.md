@@ -15,14 +15,8 @@ These files are used to run node and handle request with js
 ### References
 All the source is cited in references
 
-### Team 4 Presentation Slides.pptx
-Presentation slides.
-
 #### GetAllLabels.java
 Experimental code ONLY. Code to get labels from all images in a local folder using the GCP Vision.
 
 #### references_experimentalCode
 References for GetAllLabels.java
-
-### Team4Task02UPMC.docx
-Report of diet analysis cloud system.
