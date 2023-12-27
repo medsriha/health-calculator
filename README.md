@@ -1,13 +1,8 @@
-# Team 4
-## Team Project
 ### rekognition.py
-rekognition.py contains the main functions of our project, which include invoking AWS rekognition API, Google Cloud Vision API and nutritionix API. At the end of rekognition.py, we send a POST request with our nutrition facts and the final score.
+rekognition.py contains the main functions, which include invoking AWS rekognition API, Google Cloud Vision API and nutritionix API. At the end of rekognition.py, we send a POST request with our nutrition facts and the final score.
 
 ### trigger_service.py
-copy a random image from a source bucket to our team test bucket by using FLask.
-
-### .gitignore
-.gitignore is used to filter certain file types
+copy a random image from a source bucket to a test bucket by using FLask.
 
 ### package.json, bin, public, routes, app.js
 These files are used to run node and handle request with js
